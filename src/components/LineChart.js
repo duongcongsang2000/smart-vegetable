@@ -102,7 +102,7 @@ const LineChart = (option) => {
 
     useEffect(() => {
         if (option.option !== "current") {
-            Axios.get(`https://smart-vegetable.herokuapp.com/dhts/${option.option}`).then((response) => {
+            Axios.get(`https://iotvegetable.herokuapp.com/dhts/${option.option}`).then((response) => {
                 setDhtList(response.data);
             });
         }
@@ -110,7 +110,7 @@ const LineChart = (option) => {
 
     useEffect(() => {
         if (option.option === "current") {
-            Axios.get(`https://smart-vegetable.herokuapp.com/dhts/${option.option}`).then((response) => {
+            Axios.get(`https://iotvegetable.herokuapp.com/dhts/${option.option}`).then((response) => {
                 setDhtList(response.data);
             });
         }

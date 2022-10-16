@@ -4,7 +4,7 @@ export const loginUser = (user) => async (dispatch) => {
     dispatch({ type: "USER_LOGIN_REQUEST" });
 
     try {
-        const response = await axios.post("https://smart-vegetable.herokuapp.com/login", user);
+        const response = await axios.post("https://iotvegetable.herokuapp.com/login", user);
         console.log(response);
         dispatch({ type: "USER_LOGIN_SUCCESS", payload: response.data });
         localStorage.setItem("currentUser", JSON.stringify(response.data));
